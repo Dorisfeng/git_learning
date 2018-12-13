@@ -11,26 +11,94 @@
     </header>
 
     <section>
-        <div class="accordion"><h1>Terminologys</h1></div>
+        <div class="accordion"><h1>git 基本命令</h1></div>
             <div class="panel">
                 <ol>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>
+                        全局配置
+                        git config -global user.name ''
+                        git config -global user.email ''
+                        本地配置
+                        git config -local user.name ''
+                        git config -local user.email ''
+                    </li>
+                    <li>
+                        初始化已存在仓库在文件目录下
+                        git init 
+                        初始化空仓库
+                        git init 仓库名
+                    </li>
+                    <li>
+                        将文件添加到暂存区
+                        git add 文件名/文件夹名
+                        所有文件
+                        git add -u
+                    </li>
+                    <li>
+                        提交变更
+                        git commit -m "变更信息"
+                    </li>
+                    <li>
+                        git状态
+                        git  status 
+                        提示哪些文件改变为暂存，哪些暂存未提交
+                    </li>
+                    <li>
+                        git 日志
+                        git log
+                    </li>
                     <li></li>
                     <li></li>
                     <li></li>
                     <li></li>
                 </ol>     
             </div>
-        <div class="accordion"><h1>Basic Commands</h1></div>
+        <div class="accordion"><h1>mac 终端命令</h1></div>
             <div class="panel">
                 <ol>
-                    <li></li>
-                    <li></li>
+                    <li>
+                        清空屏幕：clear
+                    </li>
+                    <li>
+                        当前文件路径：pwd
+                     </li>
+                    <li>
+                        拷贝文件：cp 文件相对路径 存放的相对路径
+                    </li>
+                    <li>
+                        改变当前目录：cd dirname进入下一层一路径
+                                cd ../ 返回上一层
+                                cd  . 返回根路径
+                    </li>
+                    <li>
+                        拷贝文件夹：cp -r 文件夹相对路径 存放的相对路径
+                    </li>
+                    <li>
+                        创建文件夹：mkdir name
+                    </li>
+                    <li>
+                        删除文件夹：rmkdir name
+                    </li>
+                    <li>
+                        移动或重命名一个目录：mvdir dir1 dir2
+                    </li>
+                    <li>
+                        在命令行打开当前文件 vi name
+                    </li>
+                    <li>
+                        显示当前目录内容：ls -la
+                    </li>
+                    <li>
+                        编辑使用vi打开的文件 按键i 
+                    </li>
+                    <li>
+                        vi编辑状态回到命令行：按esc 取消编辑 然后 shit+z(两次)
+                    </li>
+                    <li>
+                        改变文件名或移动文件：
+                            mv name1 name2 将name1重命名为name2
+                            mv: dir1  dir2 将路经dir1下的文件移动到dir2下
+                    </li>
                     <li></li>
                     <li></li>
                     <li></li>
@@ -43,5 +111,10 @@
             </div>
         </div>
     </section>
-<footer> <p> <a href="https://github.com/TTN-js/unforGITtable"> 参考项目 01</a> </p> </footer> 
+    <footer> 
+        <p> 
+            <a href="https://github.com/TTN-js/unforGITtable"> 参考项目 01</a> 
+        </p>
+    </footer>
+    <script src='./js/script.js'></script> 
 </html>

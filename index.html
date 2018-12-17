@@ -16,41 +16,114 @@
                 <ol>
                     <li>
                         全局配置
-                        git config -global user.name ''
-                        git config -global user.email ''
-                        本地配置
-                        git config -local user.name ''
-                        git config -local user.email ''
+                        <ul>
+                            <li>
+                                    git config -global user.name ''
+                            </li>
+                            <li>
+                                    git config -global user.email ''
+                            </li>
+                        </ul>
                     </li>
                     <li>
-                        初始化已存在仓库在文件目录下
-                        git init 
-                        初始化空仓库
-                        git init 仓库名
+                            本地配置
+                        <ul>
+                            <li>
+                                    git config -local user.name ''
+                            </li>
+                            <li>
+                                    git config -local user.email ''
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        初始化仓库
+                        <ul>
+                            <li>已存本地项目，在根路径下： git init</li>
+                            <li>初始化空仓库：git init 仓库名</li>
+                        </ul>
                     </li>
                     <li>
                         将文件添加到暂存区
-                        git add 文件名/文件夹名
-                        所有文件
-                        git add -u
+                        <ul>
+                            <li>
+                                   单个文件：git add 文件名/文件夹名
+                            </li>
+                            <li>
+                                    所有文件：git add -u
+                            </li>
+                        </ul>
                     </li>
                     <li>
                         提交变更
-                        git commit -m "变更信息"
+                        <ul>
+                            <li>
+                                 提交暂存区变更：  git commit -m "变更信息"
+                            </li>
+                            <li>
+                                直接提交，未存入暂存区：git commit -am "变更信息"
+                            </li>
+                        </ul>
                     </li>
                     <li>
-                        git状态
-                        git  status 
-                        提示哪些文件改变为暂存，哪些暂存未提交
+                        仓库状态：git  status  (提示哪些文件改变为暂存，哪些暂存未提交)
                     </li>
                     <li>
-                        git 日志
-                        git log
+                        已提交文件重命名的简便方法：git mv readme readme.md 
                     </li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>
+                        日志
+                        <ul>
+                            <li> 
+                             当前分支版本信息：git log
+                            </li>
+                            <li>
+                              查看简洁版本历史：git log --oneline
+                            </li>
+                            <li>
+                              最近几次提交版本：git log -n2  --oneline（2次）
+                            </li>
+                            <li>
+                             所有分支版本信息：git log --all
+                            </li>
+                            <li>
+                             所有分支图形化版本信息：git log --all --graph
+                            </li>
+                            <li>
+                                多个命令组合：git  log --oneline --all --graph -n2
+                            </li>
+                        </ul>   
+                    </li>
+                    <li>
+                        跳转到git log 的帮助文档网页:git help --web log
+                    </li>
+                    <li>
+                        分支
+                        <ul>
+                            <li>
+                               查看当前分支信息：git branch -v                                
+                            </li>
+                            <li>
+                                查看所有分支名字：git branch -a
+                            </li>
+                            <li>
+                                查看所有分支信息：git branch -av
+                            </li>
+                            <li>
+                                创建新分支,指向指定commit：git checkout -b [分支名字] [commit]                                
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        Git对象彼此关系commit -> tree(文件夹）->blob（具体文件） <br>
+                        查看git里面的对象的内容<br>
+                        git cat-file -p [文件hash值]<br>
+                    </li>
+                    <li>
+                        查看git里面的存储对象的类型<br>
+                        git cat-file -t [文件hash值]<br>
+                    </li>
+                    
                 </ol>     
             </div>
         <div class="accordion"><h1>mac 终端命令</h1></div>
@@ -89,18 +162,34 @@
                         显示当前目录内容：ls -la
                     </li>
                     <li>
-                        编辑使用vi打开的文件 按键i 
+                        编辑使用vi打开的文件 ，输入i-变成可编辑状态 
                     </li>
                     <li>
-                        vi编辑状态回到命令行：按esc 取消编辑 然后 shit+z(两次)
+                        vi编辑状态回到命令行：按esc 取消编辑 然后
+                        :w 保存文件但不退出vi
+                        :w file 将修改另外保存到file中，不退出vi
+                        :w! 强制保存，不推出vi
+                        :wq 保存文件并退出vi
+                        :wq! 强制保存文件，并退出vi
+                        q: 不保存文件，退出vi
+                        :q! 不保存文件，强制退出vi
+                        :e! 放弃所有修改，从上次保存文件开始再编辑
                     </li>
                     <li>
                         改变文件名或移动文件：
                             mv name1 name2 将name1重命名为name2
                             mv: dir1  dir2 将路经dir1下的文件移动到dir2下
                     </li>
-                    <li></li>
-                    <li></li>
+                    <li>
+                        创建文件和内容：echo 'hello world' >readme
+                    </li>
+                    <li>
+                        查看.git/objects文件夹里面的文件类型<br>
+                        find .git/objects -type f 
+                    </li>
+                    <li>
+                        cat+文件名：将普通文件内容打印到屏幕上
+                    </li>
                     <li></li>
                     <li></li>
                     <li></li>
